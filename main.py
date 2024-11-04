@@ -3,21 +3,11 @@ from graphics import *
 def main():
     win = Window(800, 600)
 
-    point1 = Point(0, 0)
-    point2 = Point(500, 500)
-
-    line = Line(point1, point2)
-    
-    win.draw_line(line, "red")
-
     cell1 = Cell(win)
-    cell1.draw(100, 500, 200, 200)
+    cell1.draw(10, 10, 100, 100)
     cell2 = Cell(win)
-    cell2.draw(200, 100, 300, 700)
-    cell3 = Cell(win)
-    cell3.draw(300, 100, 400, 200)
-    cell4 = Cell(win)
-    cell4.draw(400, 600, 500, 200)
+    cell2.draw(500, 500, 600, 600)
+    cell1.draw_move(cell2)
 
     win.wait_for_close()
 
