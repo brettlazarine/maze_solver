@@ -13,7 +13,9 @@ def main():
     win = Window(screen_x, screen_y)
 
     maze = Maze(margin, margin, num_rows, num_cols, cell_size_x, cell_size_y, win, 10)
-
+    print("MAZE CREATED")
+    solved = maze.solve()
+    print("MAZE SOLVED") if solved else print("MAZE NOT SOLVED")
     win.wait_for_close()
 
 if __name__ == "__main__":
